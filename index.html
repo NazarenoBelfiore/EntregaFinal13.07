@@ -145,6 +145,21 @@
             background: #fe6b00;
         }
 
+        #hero-video {
+            display: none !important;
+        }
+        .hero-bg-mobile {
+            display: block !important;
+        }
+        @media (min-width: 768px) {
+            #hero-video {
+                display: block !important;
+            }
+            .hero-bg-mobile {
+                display: none !important;
+            }
+        }
+
         html {
             scroll-behavior: initial !important;
             font-variant-ligatures: none !important;
@@ -755,13 +770,13 @@
             id="experience">
             <div class="absolute inset-0 z-0 opacity-100 transition-all duration-1000 ease-out">
                 <!-- Video para Desktop -->
-                <video id="hero-video" autoplay muted playsinline preload="metadata" poster="assets/fondo2.png"
+                <video id="hero-video" autoplay muted playsinline preload="metadata"
                     class="hidden md:block w-full h-full object-cover scale-[1.05] origin-top-left">
                     <source src="assets/nuevohero.mp4" type="video/mp4" />
                 </video>
                 <!-- Imagen para Mobile -->
                 <img src="assets/fondomob.png" alt="Venzo Amphion Hero Background Mobile"
-                    class="block md:hidden w-full h-full object-cover object-center select-none pointer-events-none"
+                    class="hero-bg-mobile block md:hidden w-full h-full object-cover object-center select-none pointer-events-none"
                     loading="eager" />
             </div>
             
@@ -835,18 +850,21 @@
 
         <!-- Módulo 2: Enfoque Profesional Extremo -->
         <section id="enfoque"
-            class="relative h-[80vh] lg:h-screen min-h-[500px] lg:min-h-[600px] flex items-end justify-center lg:items-center lg:justify-end pb-16 lg:pb-0 overflow-hidden bg-background cv-auto reveal-on-scroll reveal-up">
+            class="relative h-[80vh] lg:h-screen min-h-[500px] lg:min-h-[600px] flex items-end justify-center lg:items-center lg:justify-end pb-16 lg:pb-0 overflow-hidden bg-background cv-auto reveal-on-scroll reveal-up"
+            style="position: relative; overflow: hidden; width: 100%;">
             <!-- Imagen de Fondo Principal -->
-            <div class="absolute inset-0 z-0">
-                <picture class="w-full h-full block">
+            <div class="absolute inset-0 z-0" style="position: absolute; inset: 0; overflow: hidden; width: 100%; height: 100%;">
+                <picture class="w-full h-full block" style="display: block; width: 100%; height: 100%;">
                     <source srcset="assets/fondocelu.png" media="(max-width: 1023px)">
                     <img src="assets/fondo2.png" alt="Uso Extremo y Profesional Venzo Amphion"
                         class="w-full h-full object-cover object-center lg:object-left select-none pointer-events-none"
+                        style="width: 100%; height: 100%; object-fit: cover;"
                         loading="lazy" />
                 </picture>
                 <!-- Overlay oscuro progresivo para asegurar la legibilidad del texto -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/20 lg:to-black/90">
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/20 lg:to-black/90"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%;">
                 </div>
             </div>
 
