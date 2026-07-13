@@ -1,0 +1,2511 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Venzo Amphion</title>
+    <meta name="description"
+        content="Venzo Amphion — Mountain bike de carbono con control absoluto en cualquier relieve. Ligera, rígida y lista para rendir al máximo." />
+    <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <!-- Preload hero video for instant playback -->
+    <link rel="preload" href="assets/nuevohero.mp4" as="video" type="video/mp4" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#3e322e",
+                        "primary-container": "#4a3126",
+                        "on-tertiary": "#2f3131",
+                        "on-primary-fixed-variant": "#5c4135",
+                        "primary-fixed-dim": "#e5beaf",
+                        "on-tertiary-container": "#9fa0a0",
+                        "outline-variant": "#504440",
+                        "tertiary": "#c6c6c7",
+                        "surface": "#1b110e",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface": "#f3ded9",
+                        "surface-dim": "#1b110e",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#353737",
+                        "on-primary-container": "#bc988a",
+                        "secondary-fixed": "#ffdbcc",
+                        "on-primary-fixed": "#2b160d",
+                        "surface-container-low": "#241916",
+                        "outline": "#9c8e88",
+                        "on-background": "#f3ded9",
+                        "surface-container-highest": "#3e322e",
+                        "surface-container-high": "#332724",
+                        "inverse-primary": "#75584b",
+                        "surface-container": "#281d1a",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#f3ded9",
+                        "surface-bright": "#433633",
+                        "secondary-container": "#fe6b00",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "on-primary": "#432b20",
+                        "secondary-fixed-dim": "#ffb693",
+                        "background": "#1b110e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#572000",
+                        "on-secondary": "#561f00",
+                        "surface-container-lowest": "#150c09",
+                        "inverse-on-surface": "#3a2e2a",
+                        "on-secondary-fixed": "#351000",
+                        "surface-tint": "#e5beaf",
+                        "on-surface-variant": "#d4c3bd",
+                        "primary": "#e5beaf",
+                        "secondary": "#ffb693",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffdbcd"
+                    },
+                    "borderRadius": {
+                        "sm": "0.125rem",
+                        "DEFAULT": "0.25rem",
+                        "md": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "edge-margin": "clamp(2rem, 8vw, 8rem)",
+                        "technical-grid": "0.5rem",
+                        "section-gap": "clamp(4rem, 15vh, 12rem)",
+                        "internal-gap": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "display-lg-mobile": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "label-mono": ["Space Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "data-point": ["Space Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["40px", { "lineHeight": "110%", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "100%", "letterSpacing": "0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "160%", "letterSpacing": "0.025em", "fontWeight": "400" }],
+                        "label-mono": ["12px", { "lineHeight": "140%", "letterSpacing": "0.12em", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "90%", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "data-point": ["14px", { "lineHeight": "120%", "letterSpacing": "0.02em", "fontWeight": "700" }]
+                    },
+                    "keyframes": {
+                        "slide-in": {
+                            "0%": { "transform": "translateX(-15%)", "filter": "brightness(0.6)" },
+                            "100%": { "transform": "translateX(0)", "filter": "brightness(1)" }
+                        },
+                        "fade-in": {
+                            "0%": { "opacity": "0", "transform": "translateY(20px)" },
+                            "100%": { "opacity": "1", "transform": "translateY(0)" }
+                        },
+                        "fade-in-down": {
+                            "0%": { "opacity": "0", "transform": "translateY(-20px)" },
+                            "100%": { "opacity": "1", "transform": "translateY(0)" }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom delicate scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1b110e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4a3126;
+            border-radius: 9999px;
+            border: 1px solid #1b110e;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fe6b00;
+        }
+
+        html {
+            scroll-behavior: initial !important;
+            font-variant-ligatures: none !important;
+            font-feature-settings: "liga" 0, "clig" 0 !important;
+        }
+
+        body {
+            background-color: #1b110e;
+            color: #f3ded9;
+            overflow-x: hidden;
+            font-variant-ligatures: none !important;
+            font-feature-settings: "liga" 0, "clig" 0 !important;
+            letter-spacing: 0.025em;
+            /* Adjusted letter-spacing for more comfortable reading */
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .carousel-item {
+            transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+        }
+
+        .carousel-item img {
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+        }
+
+        .carousel-item.active {
+            width: 70%;
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        .carousel-item.inactive {
+            width: 15%;
+            opacity: 0.5;
+            filter: grayscale(100%);
+            cursor: pointer;
+        }
+
+        @media (min-width: 1024px) {
+            .carousel-item.active {
+                width: 38%;
+            }
+
+            .carousel-item.inactive {
+                width: 29%;
+            }
+
+            /* Constrain text width to prevent line wrapping/reflow during card expansion */
+            .carousel-text-box {
+                width: 35vw !important;
+                max-width: 500px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+        }
+
+        .carousel-item.inactive:hover {
+            opacity: 0.8;
+            filter: grayscale(50%);
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        /* Efficient hotspot pulse — replaces infinite animate-ping */
+        @keyframes hotspot-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            70% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        .hotspot-ping {
+            animation: hotspot-pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        /* Content visibility optimization for off-screen sections */
+        .cv-auto {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 100vh;
+        }
+
+        .reveal-up {
+            transform: translateY(40px);
+        }
+
+        .reveal-down {
+            transform: translateY(-40px);
+        }
+
+        .reveal-left {
+            transform: translateX(-45px);
+        }
+
+        .reveal-right {
+            transform: translateX(45px);
+        }
+
+        .reveal-scale {
+            transform: scale(0.96);
+        }
+
+        .reveal-visible {
+            opacity: 1;
+            transform: translate(0) scale(1) !important;
+        }
+
+        .reveal-delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .reveal-delay-150 {
+            transition-delay: 150ms;
+        }
+
+        .reveal-delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .reveal-delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .reveal-delay-400 {
+            transition-delay: 400ms;
+        }
+
+        .reveal-delay-450 {
+            transition-delay: 450ms;
+        }
+
+        .specs-cover-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.78vh;
+            pointer-events: none;
+        }
+
+        .specs-cover-container>* {
+            pointer-events: auto;
+        }
+
+        /* Interactive Hotspots styling */
+        .hotspot-dot {
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ffffff 0%, #d8d8d8 70%, #aaaaaa 100%);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 4px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .hotspot-dot:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hotspot-item.hotspot-active .hotspot-tooltip {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+
+        .hotspot-item.hotspot-active .hotspot-dot {
+            background: radial-gradient(circle, #ff9d5e 0%, #fe6b00 65%, #441700 100%) !important;
+            box-shadow: 0 0 25px rgba(254, 107, 0, 0.95), 0 0 10px rgba(254, 107, 0, 0.6) !important;
+            border-color: #ffffff !important;
+            transform: scale(1.25);
+        }
+
+        /* Tooltip animation and transitions */
+        .hotspot-tooltip {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.95) translateY(5px);
+            transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform, opacity;
+            z-index: 30;
+        }
+
+        .hotspot-item.hotspot-active .hotspot-tooltip {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            transform: scale(1) translateY(0) !important;
+        }
+
+        /* Callout lines connecting hotspot dots to tooltips */
+        .tooltip-line {
+            position: absolute;
+            height: 1px;
+            pointer-events: none;
+            transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 5;
+        }
+
+        /* Left Line: Horizontal from dot extending to the left */
+        .tooltip-left-line {
+            right: 10px;
+            top: 10px;
+            background: linear-gradient(to left, rgba(254, 107, 0, 0.95), rgba(255, 255, 255, 0.25));
+            transform-origin: right;
+            transform: translateY(-50%) scaleX(0);
+        }
+
+        .hotspot-item.hotspot-active .tooltip-left-line {
+            transform: translateY(-50%) scaleX(1) !important;
+        }
+
+        /* Right Line: Horizontal from dot extending to the right */
+        .tooltip-right-line {
+            left: 10px;
+            top: 10px;
+            background: linear-gradient(to right, rgba(254, 107, 0, 0.95), rgba(255, 255, 255, 0.25));
+            transform-origin: left;
+            transform: translateY(-50%) scaleX(0);
+        }
+
+        .hotspot-item.hotspot-active .tooltip-right-line {
+            transform: translateY(-50%) scaleX(1) !important;
+        }
+
+        /* Thin terrains section icons (Module 1.5) */
+        #terrains .material-symbols-outlined {
+            font-variation-settings: 'wght' 200;
+        }
+
+        /* Expand touch target for mobile hotspot dots without visual enlargement */
+        .hotspot-dot::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+        }
+
+        /* Hide hotspots on mobile viewports as static specs grid is shown below */
+        @media (max-width: 1023px) {
+            .hotspot-item {
+                display: none !important;
+            }
+        }
+
+        #mobile-bike-hotspot {
+            width: 14px !important;
+            height: 14px !important;
+        }
+
+        #mobile-bike-hotspot .hotspot-ping {
+            width: 14px !important;
+            height: 14px !important;
+        }
+
+        #mobile-bike-hotspot .hotspot-dot {
+            width: 14px !important;
+            height: 14px !important;
+            border-radius: 50%;
+            border: 1.5px solid #ffffff !important;
+            background: radial-gradient(circle, #ff9d5e 0%, #fe6b00 65%, #441700 100%) !important;
+            box-shadow: 0 0 15px rgba(254, 107, 0, 0.9), 0 0 6px rgba(254, 107, 0, 0.5) !important;
+            transform: scale(1.1) !important;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+
+        /* ================================================================
+       MOBILE RESPONSIVE OVERRIDES  (max-width: 1023px)
+       ================================================================ */
+        @media (max-width: 1023px) {
+
+            /* ---- 1. HERO (#experience) ---- */
+            /* Remove desktop-only left padding and use edge-margin */
+            #experience .relative.z-10 {
+                padding-bottom: 4rem !important;
+            }
+
+
+
+            /* ---- 2. TERRAINS (#terrains) ---- */
+            #terrains>div {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 2.5rem 1rem !important;
+                justify-items: center !important;
+            }
+
+            #terrains .material-symbols-outlined {
+                font-size: 76px !important;
+            }
+
+            #terrains .font-label-mono {
+                font-size: 11px !important;
+                letter-spacing: 0.12em !important;
+            }
+
+
+
+            /* ---- 4. PILARES (#mastery) ---- */
+            /* Reduce excessive card height on mobile to prevent 1100px+ scroll */
+            #mastery .grid>div[class*="reveal-on-scroll"] {
+                min-height: 260px !important;
+            }
+
+            /* ---- 5. SPECS INTERACTIVOS (#specs-interactive) ---- */
+            /* Prevent scale overflow on mobile */
+            #experience .scale-\[1\.05\] {
+                transform: scale(1.05) !important;
+            }
+
+
+
+            /* ---- 7. CAROUSEL (#components) ---- */
+            #components .carousel-container {
+                display: flex !important;
+                flex-direction: column !important;
+                height: auto !important;
+                min-height: auto !important;
+                gap: 1.5rem !important;
+                overflow: visible !important;
+            }
+
+            #components .carousel-item {
+                position: relative !important;
+                width: 100% !important;
+                height: 280px !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                transform: none !important;
+                filter: none !important;
+            }
+
+            #components .carousel-item img {
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+
+            #components .carousel-text-box {
+                opacity: 1 !important;
+            }
+
+            .tooltip-line {
+                display: none !important;
+            }
+
+            .hotspot-tooltip {
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                transform: none !important;
+            }
+
+            .carousel-dot {
+                margin: 0 2px;
+            }
+
+            .performance-grid {
+                gap: 1.5rem !important;
+            }
+
+            /* ---- 8. CUSTOMIZER (#customizer) — REESTRUCTURA COMPLETA ---- */
+
+            /* Section container: stacks vertically, auto height */
+            #customizer {
+                padding: 0 !important;
+                min-height: auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            /* Visual area: exact 16:9 aspect ratio matching the mobile images, adjusting dynamically with zero gaps */
+            #customizer-visual-area {
+                position: relative;
+                left: 50% !important;
+                right: 50% !important;
+                width: 100vw !important;
+                margin-left: -50vw !important;
+                margin-right: -50vw !important;
+                aspect-ratio: 16 / 9;
+                height: auto !important;
+                min-height: 0 !important;
+                overflow: hidden;
+                background: #160e0c;
+                border-radius: 0 !important;
+                border: none !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                box-shadow: none !important;
+                margin-top: 1rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            /* BG stack container inside the frame */
+            #customizer-visual-area .customizer-bgs {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+            }
+
+            /* Aspect images: fill container exactly with no empty space */
+            #customizer-visual-area .customizer-bg {
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center 75% !important;
+                transform: none !important;
+            }
+
+            /* Hide the spotlight cone on mobile */
+            #customizer-visual-area .customizer-spotlight-cone {
+                display: none !important;
+            }
+
+            /* Hide the desktop left-gradient overlay */
+            #customizer>.bg-gradient-to-r {
+                display: none !important;
+            }
+
+            /* Swatch container below the image */
+            #customizer-interaction-panel {
+                position: relative;
+                z-index: 10;
+                background: transparent;
+                padding: 0.5rem 0 !important;
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Circle swatches logic */
+            .customizer-swatch-circle {
+                border-color: rgba(255, 255, 255, 0.15) !important;
+                transform: scale(1.0);
+                transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+            }
+
+            .customizer-swatch-circle.active {
+                border-color: #fe6b00 !important;
+                transform: scale(1.15);
+                box-shadow: 0 0 14px rgba(254, 107, 0, 0.5);
+            }
+
+            #customizer {
+                padding-top: 120px !important;
+                padding-bottom: 60px !important;
+            }
+
+            /* ---- 9. REVIEWS (#reviews) ---- */
+            /* Reduce excessive title bottom margin on mobile */
+            #reviews .text-center.mb-16 {
+                margin-bottom: 2rem !important;
+            }
+
+            #reviews .grid>div {
+                min-height: auto !important;
+                padding: 1.25rem !important;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #reviews-track {
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-secondary-container selection:text-on-secondary-container" spellcheck="false">
+    <!-- TopNavBar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all ease-out duration-300 bg-transparent border-b border-transparent opacity-0 animate-[fade-in-down_0.5s_ease-out_0.3s_forwards] px-edge-margin">
+        <div id="navbar-container"
+            class="max-w-[90rem] mx-auto w-full flex justify-between items-center py-4 md:py-6 transition-all ease-out duration-300">
+            <a class="flex items-center" href="#experience" aria-label="Venzo Amphion Home">
+                <img src="assets/venzologo.png" alt="Venzo"
+                    class="h-6 md:h-8 w-auto object-contain transition-opacity duration-300 hover:opacity-85" />
+            </a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="nav-link relative pb-1 font-label-mono text-label-mono uppercase transition-all duration-300 text-on-surface/80 font-bold hover:text-secondary"
+                    href="#enfoque">
+                    ENFOQUE
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-secondary scale-x-0 origin-left transition-transform duration-300"></span>
+                </a>
+                <a class="nav-link relative pb-1 font-label-mono text-label-mono uppercase transition-all duration-300 text-on-surface/80 font-bold hover:text-secondary"
+                    href="#mastery">
+                    RENDIMIENTO
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-secondary scale-x-0 origin-left transition-transform duration-300"></span>
+                </a>
+                <a class="nav-link relative pb-1 font-label-mono text-label-mono uppercase transition-all duration-300 text-on-surface/80 font-bold hover:text-secondary"
+                    href="#specs-interactive">
+                    COMPONENTES
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-secondary scale-x-0 origin-left transition-transform duration-300"></span>
+                </a>
+                <a class="nav-link relative pb-1 font-label-mono text-label-mono uppercase transition-all duration-300 text-on-surface/80 font-bold hover:text-secondary"
+                    href="#components">
+                    TECNOLOGÍA
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-secondary scale-x-0 origin-left transition-transform duration-300"></span>
+                </a>
+                <a class="nav-link relative pb-1 font-label-mono text-label-mono uppercase transition-all duration-300 text-on-surface/80 font-bold hover:text-secondary"
+                    href="#customizer">
+                    ASPECTOS
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-secondary scale-x-0 origin-left transition-transform duration-300"></span>
+                </a>
+                <a class="nav-link relative pb-1 font-label-mono text-label-mono uppercase transition-all duration-300 text-on-surface/80 font-bold hover:text-secondary"
+                    href="#reviews">
+                    RESEÑAS
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-secondary scale-x-0 origin-left transition-transform duration-300"></span>
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface focus:outline-none">
+                <span class="material-symbols-outlined text-[28px]">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[100] translate-x-full transition-transform duration-500 ease-in-out pointer-events-none">
+        <!-- Backdrop overlay -->
+        <div id="mobile-menu-backdrop"
+            class="absolute inset-0 bg-[#1b110e]/60 backdrop-blur-md opacity-0 transition-opacity duration-500 ease-in-out pointer-events-auto">
+        </div>
+
+        <!-- Drawer Content -->
+        <div
+            class="absolute right-0 top-0 h-full w-[80vw] max-w-[320px] bg-[#1b110e] border-l border-white/5 p-8 flex flex-col justify-between pointer-events-auto shadow-2xl z-10">
+            <div>
+                <!-- Close Button Header -->
+                <div class="flex justify-between items-center mb-12">
+                    <span class="font-label-mono text-[11px] tracking-widest text-secondary font-bold">MENÚ</span>
+                    <button id="mobile-menu-close"
+                        class="text-on-surface hover:text-secondary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-[28px]">close</span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="flex flex-col gap-8">
+                    <a class="mobile-nav-link font-label-mono text-[14px] tracking-[0.15em] uppercase text-on-surface font-bold hover:text-secondary transition-colors duration-300"
+                        href="#enfoque">ENFOQUE</a>
+                    <a class="mobile-nav-link font-label-mono text-[14px] tracking-[0.15em] uppercase text-on-surface font-bold hover:text-secondary transition-colors duration-300"
+                        href="#mastery">RENDIMIENTO</a>
+                    <a class="mobile-nav-link font-label-mono text-[14px] tracking-[0.15em] uppercase text-on-surface font-bold hover:text-secondary transition-colors duration-300"
+                        href="#specs-interactive">COMPONENTES</a>
+                    <a class="mobile-nav-link font-label-mono text-[14px] tracking-[0.15em] uppercase text-on-surface font-bold hover:text-secondary transition-colors duration-300"
+                        href="#components">TECNOLOGÍA</a>
+                    <a class="mobile-nav-link font-label-mono text-[14px] tracking-[0.15em] uppercase text-on-surface font-bold hover:text-secondary transition-colors duration-300"
+                        href="#customizer">ASPECTOS</a>
+                    <a class="mobile-nav-link font-label-mono text-[14px] tracking-[0.15em] uppercase text-on-surface font-bold hover:text-secondary transition-colors duration-300"
+                        href="#reviews">RESEÑAS</a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="flex flex-col gap-6">
+                <div class="font-label-mono text-[9px] tracking-wider opacity-40 text-center">
+                    © 2024 VENZO VANGUARD
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Módulo 1 (Hero) -->
+        <section
+            class="relative min-h-screen flex items-start justify-center md:items-center md:justify-start bg-surface overflow-hidden pt-24 pb-section-gap"
+            id="experience">
+            <div class="absolute inset-0 z-0 opacity-100 transition-all duration-1000 ease-out">
+                <!-- Video para Desktop -->
+                <video id="hero-video" autoplay muted playsinline preload="metadata" poster="assets/fondo2.png"
+                    class="hidden md:block w-full h-full object-cover scale-[1.05] origin-top-left">
+                    <source src="assets/nuevohero.mp4" type="video/mp4" />
+                </video>
+                <!-- Imagen para Mobile -->
+                <img src="assets/fondomob.png" alt="Venzo Amphion Hero Background Mobile"
+                    class="block md:hidden w-full h-full object-cover object-center select-none pointer-events-none"
+                    loading="eager" />
+            </div>
+            
+            <!-- Desktop Vertical Gradient (hidden on mobile) -->
+            <div
+                class="hidden md:block absolute inset-0 bg-[linear-gradient(to_bottom,rgba(27,17,14,0.1)_0%,rgba(27,17,14,0)_30%,rgba(27,17,14,0.6)_70%,rgba(27,17,14,1)_100%)] z-0">
+            </div>
+            <!-- Desktop Horizontal Gradient (hidden on mobile) -->
+            <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-[#1b110e]/75 via-[#1b110e]/20 to-transparent z-0"></div>
+            <!-- Mobile Top Gradient Overlay (for text readability) -->
+            <div class="md:hidden absolute inset-x-0 top-0 bg-gradient-to-b from-black/80 via-black/35 to-transparent z-0 h-[45%]"></div>
+
+            <div
+                class="relative z-10 w-full px-edge-margin flex flex-col items-center text-center md:items-start md:text-left mt-12 md:mt-auto pb-12 md:pb-36 max-w-4xl md:max-w-3xl mx-auto md:ml-0 md:pl-16 lg:pl-24 xl:pl-32">
+                <span
+                    class="font-label-mono text-[15px] md:text-[18px] text-secondary tracking-[0.22em] uppercase font-bold mb-2 md:mb-4 opacity-0 animate-[fade-in_0.5s_ease-out_0.4s_forwards]">
+                    VENZO AMPHION</span>
+                <h1
+                    class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-2.5 md:mb-6 tracking-[0.06em] md:tracking-[0.08em] uppercase font-bold leading-none opacity-0 animate-[fade-in_0.5s_ease-out_0.5s_forwards]">
+                    DOMINA EL TERRENO</h1>
+                
+                <div
+                    class="font-body-lg text-[14px] md:text-[18px] text-on-surface-variant/90 max-w-[340px] md:max-w-2xl leading-relaxed opacity-0 animate-[fade-in_0.5s_ease-out_0.6s_forwards] font-normal text-center md:text-left">
+                    Diseñada para superar los límites de cualquier entorno.<br class="hidden md:inline" />
+                    Una estructura ligera y rígida creada para rendir al máximo nivel.
+                </div>
+            </div>
+        </section>
+
+        <!-- Módulo Intermedio (Terrenos de Conquista) -->
+        <section class="py-16 md:py-20 px-edge-margin relative z-20 overflow-hidden cv-auto reveal-on-scroll reveal-up"
+            id="terrains">
+            <div
+                class="max-w-[70rem] mx-auto w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-12 md:gap-20 justify-center items-center">
+                <!-- Terreno 1: Calle -->
+                <div class="flex flex-col items-center gap-6 group cursor-default reveal-on-scroll reveal-up">
+                    <span
+                        class="material-symbols-outlined text-[76px] md:text-[90px] text-secondary transition-all duration-300 group-hover:text-[#fe6b00] group-hover:scale-110">road</span>
+                    <span
+                        class="font-label-mono text-[14px] md:text-[15px] text-on-surface-variant/80 tracking-[0.22em] uppercase transition-colors duration-300 group-hover:text-white">CALLE</span>
+                </div>
+
+                <!-- Terreno 2: Tierra -->
+                <div
+                    class="flex flex-col items-center gap-6 group cursor-default reveal-on-scroll reveal-up reveal-delay-100">
+                    <span
+                        class="material-symbols-outlined text-[76px] md:text-[90px] text-secondary transition-all duration-300 group-hover:text-[#fe6b00] group-hover:scale-110">terrain</span>
+                    <span
+                        class="font-label-mono text-[14px] md:text-[15px] text-on-surface-variant/80 tracking-[0.22em] uppercase transition-colors duration-300 group-hover:text-white">TIERRA</span>
+                </div>
+
+                <!-- Terreno 3: Piedra -->
+                <div
+                    class="flex flex-col items-center gap-6 group cursor-default reveal-on-scroll reveal-up reveal-delay-200">
+                    <span
+                        class="material-symbols-outlined text-[76px] md:text-[90px] text-secondary transition-all duration-300 group-hover:text-[#fe6b00] group-hover:scale-110">landslide</span>
+                    <span
+                        class="font-label-mono text-[14px] md:text-[15px] text-on-surface-variant/80 tracking-[0.22em] uppercase transition-colors duration-300 group-hover:text-white">PIEDRA</span>
+                </div>
+
+                <!-- Terreno 4: Arena -->
+                <div
+                    class="flex flex-col items-center gap-6 group cursor-default reveal-on-scroll reveal-up reveal-delay-300">
+                    <span
+                        class="material-symbols-outlined text-[76px] md:text-[90px] text-secondary transition-all duration-300 group-hover:text-[#fe6b00] group-hover:scale-110">grain</span>
+                    <span
+                        class="font-label-mono text-[14px] md:text-[15px] text-on-surface-variant/80 tracking-[0.22em] uppercase transition-colors duration-300 group-hover:text-white">ARENA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Módulo 2: Enfoque Profesional Extremo -->
+        <section id="enfoque"
+            class="relative h-[80vh] lg:h-screen min-h-[500px] lg:min-h-[600px] flex items-end justify-center lg:items-center lg:justify-end pb-16 lg:pb-0 overflow-hidden bg-background cv-auto reveal-on-scroll reveal-up">
+            <!-- Imagen de Fondo Principal -->
+            <div class="absolute inset-0 z-0">
+                <picture class="w-full h-full block">
+                    <source srcset="assets/fondocelu.png" media="(max-width: 1023px)">
+                    <img src="assets/fondo2.png" alt="Uso Extremo y Profesional Venzo Amphion"
+                        class="w-full h-full object-cover object-center lg:object-left select-none pointer-events-none"
+                        loading="lazy" />
+                </picture>
+                <!-- Overlay oscuro progresivo para asegurar la legibilidad del texto -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/20 lg:to-black/90">
+                </div>
+            </div>
+
+            <!-- Contenedor del Texto (Lado Derecho / Abajo en móvil) -->
+            <div class="relative z-10 w-full max-w-[90rem] mx-auto px-edge-margin flex justify-center lg:justify-end">
+                <div
+                    class="max-w-[620px] text-center items-center lg:text-right lg:items-end flex flex-col reveal-on-scroll reveal-right">
+                    <h2
+                        class="font-display-lg text-[32px] md:text-[56px] text-white font-bold uppercase leading-[1.05] mb-6 tracking-tight">
+                        HECHA PARA LA<br>MÁXIMA EXIGENCIA
+                    </h2>
+                    <p
+                        class="font-body-lg text-[16px] md:text-[18px] text-on-surface-variant/90 leading-relaxed font-normal">
+                        Sometida a las pruebas más exigentes del ciclismo profesional. La Venzo Amphion responde con
+                        rigidez de competición y un control absoluto en las condiciones más hostiles de la montaña.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Módulo 3 (Rendimiento Absoluto) -->
+        <section
+            class="relative bg-background overflow-hidden py-24 md:py-36 lg:py-40 px-edge-margin cv-auto reveal-on-scroll reveal-up"
+            id="mastery">
+            <div class="relative z-10 max-w-[90rem] mx-auto w-full flex flex-col justify-center gap-8 lg:gap-12">
+                <!-- Section Header -->
+                <div class="max-w-3xl text-center mx-auto reveal-on-scroll reveal-up">
+                    <h2
+                        class="font-display-lg text-[32px] md:text-[56px] text-white tracking-normal uppercase font-bold leading-tight">
+                        Una bicicleta superior
+                    </h2>
+                    <p
+                        class="font-body-lg text-[16px] md:text-[18px] text-on-surface-variant max-w-2xl mt-4 leading-relaxed mx-auto">
+                        Tres pilares clave diseñados para brindarte el mejor control en cada salida
+                    </p>
+                </div>
+
+                <!-- Pillars Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
+                    <!-- Pillar 1: Geometría Adaptativa & Dirección Lanzada (Descensos) -->
+                    <div
+                        class="relative group overflow-hidden rounded-2xl p-6 lg:p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 flex flex-col justify-between min-h-[340px] lg:min-h-[290px] transition-all duration-500 hover:border-secondary/30 hover:shadow-[0_12px_40px_rgba(254,107,0,0.08)] reveal-on-scroll reveal-up">
+                        <div>
+                            <!-- SVG Illustration (Slack Headtube Geometry) -->
+                            <div
+                                class="w-full h-32 lg:h-28 flex items-center justify-center mb-4 lg:mb-3 overflow-hidden rounded-xl bg-black/20 border border-white/5 relative">
+                                <svg class="w-full h-full p-2 text-white/20 transition-transform duration-700 ease-out group-hover:scale-105"
+                                    viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Ground reference line (thick dashed line) -->
+                                    <line x1="15" y1="85" x2="185" y2="85" stroke="currentColor" stroke-width="3"
+                                        stroke-dasharray="6 6" />
+
+                                    <!-- Rear wheel reference (dashed circle) -->
+                                    <circle cx="45" cy="63" r="22" stroke="currentColor" stroke-width="3"
+                                        stroke-dasharray="4 3" />
+                                    <!-- Front wheel reference (dashed circle) -->
+                                    <circle cx="155" cy="63" r="22" stroke="currentColor" stroke-width="3"
+                                        stroke-dasharray="4 3" />
+
+                                    <!-- Bicycle Frame Main Triangle -->
+                                    <!-- Rear drop (45, 63) -> Seat top (95, 30) -> Bottom bracket (105, 63) -> Rear drop (45, 63) -->
+                                    <path d="M45 63 L95 30 L105 63 Z" stroke="currentColor" stroke-width="3"
+                                        stroke-linejoin="round" />
+                                    <!-- Seat top (95, 30) -> Head tube (135, 30) -> Bottom bracket (105, 63) -->
+                                    <path d="M95 30 L135 30 L105 63" stroke="currentColor" stroke-width="3"
+                                        stroke-linejoin="round" />
+
+                                    <!-- Front Fork and Handlebar - Highlighted in Orange (#fe6b00) -->
+                                    <!-- Head tube to Front axle, and steering tube to handlebar -->
+                                    <line x1="135" y1="30" x2="155" y2="63" stroke="#fe6b00" stroke-width="4.5"
+                                        stroke-linecap="round" />
+                                    <path d="M135 30 L132 18 L122 18" stroke="#fe6b00" stroke-width="4.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <!-- Card Header -->
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary group-hover:bg-secondary/10 group-hover:border-secondary/20 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-[18px]">route</span>
+                                </div>
+                                <h3 class="font-headline-md text-[18px] text-white uppercase font-bold tracking-wide">
+                                    Estabilidad en Bajadas</h3>
+                            </div>
+                        </div>
+
+                        <!-- Solution Description -->
+                        <div class="mt-auto">
+                            <p
+                                class="font-body-lg text-[13px] md:text-[14px] text-on-surface-variant leading-relaxed lg:min-h-[4.5rem]">
+                                Mayor distancia entre ejes y un ángulo de dirección de <span
+                                    class="text-secondary font-bold">68.5°</span> que te brindan total seguridad y
+                                estabilidad en bajadas difíciles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Absorción Orgánica & Monocasco de Carbono -->
+                    <div
+                        class="relative group overflow-hidden rounded-2xl p-6 lg:p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 flex flex-col justify-between min-h-[340px] lg:min-h-[290px] transition-all duration-500 hover:border-secondary/30 hover:shadow-[0_12px_40px_rgba(254,107,0,0.08)] reveal-on-scroll reveal-up reveal-delay-150">
+                        <div>
+                            <!-- SVG Illustration (Carbon Frame) -->
+                            <div
+                                class="w-full h-32 lg:h-28 flex items-center justify-center mb-4 lg:mb-3 overflow-hidden rounded-xl bg-black/20 border border-white/5 relative">
+                                <svg class="w-full h-full p-2 text-white/20 transition-transform duration-700 ease-out group-hover:scale-105"
+                                    viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Wheels -->
+                                    <circle cx="45" cy="63" r="22" stroke="currentColor" stroke-width="3" />
+                                    <circle cx="155" cy="63" r="22" stroke="currentColor" stroke-width="3" />
+
+                                    <!-- Fork, handlebar, seatpost (thin gray/white) -->
+                                    <line x1="135" y1="30" x2="155" y2="63" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" />
+                                    <path d="M135 30 L132 18 L122 18" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M95 30 L90 20 L100 20" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+
+                                    <!-- Carbon Frame Triangle Outline - Highlighted in Orange (#fe6b00) -->
+                                    <path d="M45 63 L105 63 L95 30 L135 30 L105 63 M45 63 L95 30" stroke="#fe6b00"
+                                        stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <!-- Card Header -->
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary group-hover:bg-secondary/10 group-hover:border-secondary/20 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-[18px]">waves</span>
+                                </div>
+                                <h3 class="font-headline-md text-[18px] text-white uppercase font-bold tracking-wide">
+                                    Cuadro de Carbono</h3>
+                            </div>
+                        </div>
+
+                        <!-- Solution Description -->
+                        <div class="mt-auto">
+                            <p
+                                class="font-body-lg text-[13px] md:text-[14px] text-on-surface-variant leading-relaxed lg:min-h-[4.5rem]">
+                                Construcción en carbono monocasco de alta resistencia que absorbe vibraciones, logrando
+                                un cuadro ultra ligero de solo <span class="text-secondary font-bold">890g</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Eficiencia de Pedaleo & Caja Pedalera (Subidas) -->
+                    <div
+                        class="relative group overflow-hidden rounded-2xl p-6 lg:p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 flex flex-col justify-between min-h-[340px] lg:min-h-[290px] transition-all duration-500 hover:border-secondary/30 hover:shadow-[0_12px_40px_rgba(254,107,0,0.08)] reveal-on-scroll reveal-up reveal-delay-300">
+                        <div>
+                            <!-- SVG Illustration (Pedalier Power Vector) -->
+                            <div
+                                class="w-full h-32 lg:h-28 flex items-center justify-center mb-4 lg:mb-3 overflow-hidden rounded-xl bg-black/20 border border-white/5 relative">
+                                <svg class="w-full h-full p-2 text-white/20 transition-transform duration-700 ease-out group-hover:scale-105"
+                                    viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Frame bottom bracket area tubes (gray/white) -->
+                                    <line x1="100" y1="50" x2="100" y2="10" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" />
+                                    <line x1="100" y1="50" x2="160" y2="25" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" />
+                                    <line x1="100" y1="50" x2="35" y2="50" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" />
+
+                                    <!-- Chainring (dashed gray/white circle) -->
+                                    <circle cx="100" cy="50" r="22" stroke="currentColor" stroke-width="3"
+                                        stroke-dasharray="5 4" />
+
+                                    <!-- Crank arm and Pedal - Highlighted in Orange (#fe6b00) -->
+                                    <!-- Bottom bracket axle center -->
+                                    <circle cx="100" cy="50" r="5" fill="#fe6b00" />
+                                    <!-- Crank arm -->
+                                    <line x1="100" y1="50" x2="125" y2="80" stroke="#fe6b00" stroke-width="4.5"
+                                        stroke-linecap="round" />
+                                    <!-- Pedal rectangle -->
+                                    <rect x="117" y="74" width="16" height="12" rx="2.5" stroke="#fe6b00"
+                                        stroke-width="4.5" fill="#1b110e" />
+                                </svg>
+                            </div>
+
+                            <!-- Card Header -->
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary group-hover:bg-secondary/10 group-hover:border-secondary/20 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-[18px]">speed</span>
+                                </div>
+                                <h3 class="font-headline-md text-[18px] text-white uppercase font-bold tracking-wide">
+                                    Fuerza de Pedaleo</h3>
+                            </div>
+                        </div>
+
+                        <!-- Solution Description -->
+                        <div class="mt-auto">
+                            <p
+                                class="font-body-lg text-[13px] md:text-[14px] text-on-surface-variant leading-relaxed lg:min-h-[4.5rem]">
+                                Caja de pedalier rígida y vainas traseras optimizadas que transfieren toda tu potencia
+                                directamente al terreno en cada pedaleo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Módulo 4 (Componentes Al Detalle) -->
+        <section id="specs-interactive"
+            class="relative bg-surface-container-lowest border-t border-outline-variant/20 py-16 md:py-24 overflow-hidden cv-auto reveal-on-scroll reveal-up">
+            <!-- Orange ambient glow —— centered directly behind the bicycle -->
+            <div class="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
+                <div
+                    style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70%;height:90%;background:radial-gradient(ellipse at center,rgba(254,107,0,0.40) 0%,rgba(254,107,0,0.20) 30%,rgba(254,107,0,0.06) 60%,transparent 80%);filter:blur(60px);">
+                </div>
+            </div>
+            <div class="w-full flex flex-col items-center">
+
+                <!-- Section Header -->
+                <div class="w-full text-center mb-8 px-edge-margin reveal-on-scroll reveal-up">
+                    <h2
+                        class="font-display-lg text-[32px] md:text-[48px] text-white tracking-normal uppercase font-bold mb-2">
+                        COMPONENTES AL DETALLE</h2>
+                </div>
+
+                <!-- Contenedor de la Bicicleta Centrado y a Escala -->
+                <div
+                    class="relative w-full lg:h-[58vh] lg:w-auto aspect-[16/9] mx-auto mt-6 flex items-center justify-center z-10 reveal-on-scroll">
+                    <div
+                        class="relative w-full h-full flex items-center justify-center scale-[1.0] md:scale-[0.9] lg:scale-[1.0]">
+
+                        <!-- Imagen principal de la bicicleta -->
+                        <img src="assets/bicivenzo.png" alt="Venzo Amphion componentes"
+                            class="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-0"
+                            loading="lazy" decoding="async" />
+
+                        <!-- Contenedor de hotspots alineado con el aspect-square de la imagen contained -->
+                        <div
+                            class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 aspect-square pointer-events-none z-20">
+                            <!-- Single dynamic hotspot for mobile device carousel -->
+                            <div id="mobile-bike-hotspot"
+                                class="absolute lg:hidden w-[20px] h-[20px] -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-out z-20 pointer-events-auto"
+                                style="top: 30%; left: 64%;">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                            </div>
+                            <!-- 1. Sillín — top-[12%] left-[29%] | LEFT side → tooltip goes LEFT -->
+                            <div class="absolute group/hotspot top-[12%] left-[29%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-left-line w-[16rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip right-[16rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            SILLÍN PRO TRAIL</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Canal
+                                            prostático antipresión y rieles de titanio para mayor comodidad.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2. Cassette trasero — top-[59%] left-[4%] | LEFT side → tooltip goes LEFT -->
+                            <div class="absolute group/hotspot top-[59%] left-[4%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-left-line w-[18rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip right-[18rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            MAZA Y CASSETTE 12V</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Relación
+                                            optimizada para trepadas empinadas y máxima respuesta.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3. Cuadro VENZO — top-[42%] left-[53%] | CENTER-RIGHT → tooltip goes RIGHT -->
+                            <div class="absolute group/hotspot top-[42%] left-[53%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-right-line w-[22rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip left-[22rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            CUADRO DE CARBONO</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Carbono
+                                            de alto módulo con cableado interno y rigidez torsional.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4. Cockpit/Manubrio — top-[10%] left-[76%] | RIGHT side → tooltip goes RIGHT -->
+                            <div class="absolute group/hotspot top-[10%] left-[76%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-right-line w-[18rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip left-[18rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            COCKPIT DE COMPETICIÓN</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Manubrio
+                                            y avance integrados para un control aerodinámico óptimo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5. Horquilla — top-[38%] left-[78%] | RIGHT side → tooltip goes RIGHT -->
+                            <div class="absolute group/hotspot top-[38%] left-[78%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-right-line w-[16rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip left-[16rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            HORQUILLA DE AIRE</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Suspensión
+                                            ajustable de 120mm con bloqueo remoto.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 6. Transmisión/Bielas — top-[63%] left-[47%] | LEFT side → tooltip goes LEFT -->
+                            <div class="absolute group/hotspot top-[63%] left-[47%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-left-line w-[26rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip right-[26rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            TRANSMISIÓN DEORE</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Monoplato
+                                            de 12 velocidades con cambios ultra precisos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 7. Freno disco delantero — top-[63%] left-[89%] | RIGHT side → tooltip goes RIGHT -->
+                            <div class="absolute group/hotspot top-[63%] left-[89%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-right-line w-[14rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip left-[14rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            FRENOS HIDRÁULICOS</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Frenado
+                                            Shimano de alta disipación térmica y tacto modulable.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 8. Ruedas tubeless — top-[80%] left-[94%] | RIGHT side → tooltip goes RIGHT -->
+                            <div class="absolute group/hotspot top-[80%] left-[94%] pointer-events-auto hotspot-item">
+                                <div
+                                    class="w-[20px] h-[20px] bg-white/20 rounded-full hotspot-ping absolute opacity-50">
+                                </div>
+                                <div class="hotspot-dot"></div>
+                                <div class="tooltip-line tooltip-right-line w-[12rem]"></div>
+                                <div
+                                    class="absolute opacity-0 pointer-events-none hotspot-tooltip left-[12rem] top-[-4rem] w-[280px] whitespace-normal">
+                                    <div
+                                        class="bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] rounded-2xl p-6 text-left">
+                                        <h3
+                                            class="font-headline-md text-[14px] md:text-[15px] text-white font-bold tracking-wider uppercase mb-2">
+                                            LLANTAS TUBELESS</h3>
+                                        <p
+                                            class="font-body-lg text-[12px] md:text-[13px] text-white/70 leading-relaxed">
+                                            Cubiertas
+                                            Maxxis de alta tracción listas para tubeless.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Specifications Carousel (visible only on mobile/tablet) -->
+            <div class="lg:hidden w-full max-w-sm mx-auto mt-6 relative px-10">
+                <!-- Botón Anterior -->
+                <button id="mobile-specs-prev"
+                    class="absolute left-1 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-secondary/20 transition-all duration-300 z-20 cursor-pointer"
+                    aria-label="Anterior">
+                    <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                </button>
+
+                <!-- Carousel Slider Window -->
+                <div id="mobile-specs-carousel" class="overflow-hidden relative w-full rounded-2xl">
+                    <div id="mobile-specs-track" class="flex transition-transform duration-500 ease-out w-full">
+                        <!-- Slide 1: Cockpit -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    COCKPIT INTEGRADO CARBONO UD</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Manubrio y avance
+                                    integrados en fibra de carbono UD, diseñados para optimizar la aerodinámica y la
+                                    rigidez de la dirección.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Cuadro -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    FIBRA DE CARBONO ORGÁNICA 890G</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Fibra de carbono de
+                                    alto módulo con un peso de solo 890g, ofreciendo una rigidez torsional incomparable
+                                    y absorción orgánica.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3: Suspensión -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    SUSPENSIÓN HORQUILLA AIRE 120MM</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Horquilla de aire
+                                    ajustable con 120mm de recorrido, optimizada para absorber impactos y proporcionar
+                                    control en terrenos técnicos.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 4: Frenos -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    FRENOS HIDRÁULICOS SHIMANO</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Frenos de disco
+                                    hidráulicos Shimano con rotores de alta disipación térmica, garantizando un frenado
+                                    potente y modulable.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 5: Transmisión -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    TRANSMISIÓN SHIMANO DEORE 12V</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Grupo de transmisión
+                                    Shimano Deore de 12 velocidades, optimizado para una retención de cadena impecable y
+                                    cambios precisos.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 6: Sillín -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    SILLÍN ERGONÓMICO PRO TRAIL</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Sillín Pro Trail con
+                                    canal prostático antipresión y rieles ligeros, garantizando comodidad y
+                                    maniobrabilidad en descensos.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 7: Cassette -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    CASSETTE ULTRA-LIGHT 12 VEL.</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Maza de acople rápido
+                                    y cassette con relación optimizada para trepadas empinadas y máxima durabilidad.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 8: Ruedas -->
+                        <div class="w-full shrink-0 px-2 select-none">
+                            <div
+                                class="p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl flex flex-col gap-3 min-h-[140px] justify-center text-left">
+                                <h3
+                                    class="font-headline-md text-[16px] text-white font-bold tracking-wide uppercase leading-tight">
+                                    RUEDAS Y NEUMÁTICOS TUBELESS</h3>
+                                <p class="font-body-lg text-[12px] text-white/70 leading-relaxed">Llantas de aluminio de
+                                    doble pared listas para tubeless, calzadas con neumáticos de alta tracción y
+                                    protección antipinchazos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Siguiente -->
+                <button id="mobile-specs-next"
+                    class="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-secondary/20 transition-all duration-300 z-20 cursor-pointer"
+                    aria-label="Siguiente">
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </button>
+
+                <!-- Dots -->
+                <div id="mobile-specs-dots" class="flex justify-center gap-1.5 mt-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300"></span>
+                </div>
+            </div>
+        </section>
+        <!-- Módulo 5 (Ingeniería de Precisión) -->
+        <section
+            class="bg-background py-16 md:py-24 px-edge-margin overflow-hidden text-white cv-auto reveal-on-scroll reveal-up"
+            id="components">
+            <div class="max-w-[90rem] mx-auto w-full flex flex-col justify-center items-center">
+                <div class="text-center mb-6 md:mb-8 reveal-on-scroll reveal-up shrink-0 w-full">
+                    <h2
+                        class="font-display-lg text-[32px] md:text-[56px] text-white tracking-normal uppercase font-bold mb-1 leading-tight">
+                        DISEÑO DE VANGUARDIA</h2>
+                    <p
+                        class="font-body-lg text-[16px] md:text-[18px] text-on-surface-variant max-w-2xl mt-4 leading-relaxed mx-auto">
+                        Ingeniería avanzada para respuestas inmediatas.
+                    </p>
+                </div>
+                <div
+                    class="carousel-container w-full flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-6 lg:h-[50vh] lg:max-h-[460px] relative reveal-on-scroll reveal-scale">
+                    <div class="carousel-item active h-full rounded-2xl overflow-hidden relative shadow-2xl"
+                        onclick="activateSlide(this)">
+                        <img class="w-full h-full object-cover" src="assets/cockpit.jpg"
+                            alt="Cockpit integrado de carbono" loading="lazy" decoding="async" />
+                        <div class="absolute inset-0 bg-black/15 transition-all duration-500 pointer-events-none"></div>
+                        <div
+                            class="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none transition-all duration-500 z-10">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full p-4 xs:p-6 md:p-8 text-white text-center transition-all duration-500 carousel-text-box z-20">
+                            <h3
+                                class="font-headline-md text-[18px] xs:text-[22px] md:text-[28px] mb-2 uppercase text-white font-bold tracking-wide">
+                                MANUBRIO</h3>
+                            <p
+                                class="font-body-lg text-[13px] xs:text-[15px] md:text-[18px] text-white font-medium leading-relaxed max-w-lg mx-auto">
+                                Manubrio de carbono en una sola pieza para máxima firmeza y cables totalmente ocultos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item inactive h-full rounded-2xl overflow-hidden relative"
+                        onclick="activateSlide(this)">
+                        <img class="w-full h-full object-cover" src="assets/drivetrain.png" alt="Transmisión Shimano"
+                            loading="lazy" decoding="async" />
+                        <div class="absolute inset-0 bg-black/25 transition-all duration-500 pointer-events-none"></div>
+                        <div
+                            class="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none transition-all duration-500 z-10">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 xs:p-6 md:p-8 text-white text-center transition-all duration-500 carousel-text-box z-20"
+                            style="opacity: 0">
+                            <h3
+                                class="font-headline-md text-[18px] xs:text-[22px] md:text-[28px] mb-2 uppercase text-white font-bold tracking-wide">
+                                TRANSMISIÓN</h3>
+                            <p
+                                class="font-body-lg text-[13px] xs:text-[15px] md:text-[18px] text-white font-medium leading-relaxed max-w-lg mx-auto">
+                                Cambios electrónicos inalámbricos para cambiar de marcha de forma rápida y precisa.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item inactive h-full rounded-2xl overflow-hidden relative"
+                        onclick="activateSlide(this)">
+                        <img class="w-full h-full object-cover" src="assets/suspension.jpg" alt="Suspensión horquilla"
+                            loading="lazy" decoding="async" />
+                        <div class="absolute inset-0 bg-black/25 transition-all duration-500 pointer-events-none"></div>
+                        <div
+                            class="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none transition-all duration-500 z-10">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 xs:p-6 md:p-8 text-white text-center transition-all duration-500 carousel-text-box z-20"
+                            style="opacity: 0">
+                            <h3
+                                class="font-headline-md text-[18px] xs:text-[22px] md:text-[28px] mb-2 uppercase text-white font-bold tracking-wide">
+                                AMORTIGUACIÓN</h3>
+                            <p
+                                class="font-body-lg text-[13px] xs:text-[15px] md:text-[18px] text-white font-medium leading-relaxed max-w-lg mx-auto">
+                                Horquilla delantera con suspensión de aire y bloqueo directo desde el manubrio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dots indicators -->
+                <div class="hidden lg:flex justify-center gap-3 mt-6 reveal-on-scroll shrink-0">
+                    <button
+                        class="carousel-dot w-2.5 h-2.5 rounded-full bg-secondary-container hover:bg-secondary-container transition-all duration-300 cursor-pointer"
+                        onclick="activateSlideByIndex(0)" aria-label="Slide 1"></button>
+                    <button
+                        class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/20 hover:bg-secondary-container transition-all duration-300 cursor-pointer"
+                        onclick="activateSlideByIndex(1)" aria-label="Slide 2"></button>
+                    <button
+                        class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/20 hover:bg-secondary-container transition-all duration-300 cursor-pointer"
+                        onclick="activateSlideByIndex(2)" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+        <!-- Módulo 5.5 (Customización) -->
+        <section id="customizer"
+            class="relative overflow-hidden bg-[#160e0c] border-t border-white/5 lg:bg-[#1b110e] lg:border-t-0 pt-8 pb-16 md:pt-12 md:pb-24 px-edge-margin cv-auto reveal-on-scroll reveal-up">
+
+            <!-- Mobile Title Block (hidden on desktop) -->
+            <div class="lg:hidden text-center w-full relative z-20 mb-4">
+                <h2 class="font-display-lg text-[28px] text-white tracking-normal uppercase font-bold mb-1.5">ELEGÍ TU
+                    AMPHION
+                </h2>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════
+         VISUAL AREA — bike display inside rounded card
+         ═══════════════════════════════════════════════ -->
+            <div class="lg:hidden w-full">
+                <div id="customizer-visual-area">
+                    <!-- Background Stack: smooth, flicker-free transitions -->
+                    <div class="customizer-bgs absolute inset-0 z-0">
+                        <img id="custom-bg-0"
+                            class="customizer-bg absolute inset-0 w-full h-full opacity-100 z-10 transition-opacity duration-300 ease-in-out select-none"
+                            src="assets/aspectomob1.jpg" alt="Fondo Gris Cromo" loading="lazy" decoding="async" />
+                        <img id="custom-bg-1"
+                            class="customizer-bg absolute inset-0 w-full h-full opacity-0 z-10 transition-opacity duration-300 ease-in-out select-none"
+                            src="assets/aspectomob2.jpg" alt="Fondo Rosa Neo" loading="lazy" decoding="async" />
+                        <img id="custom-bg-2"
+                            class="customizer-bg absolute inset-0 w-full h-full opacity-0 z-10 transition-opacity duration-300 ease-in-out select-none"
+                            src="assets/aspectomob3.jpg" alt="Fondo Verde Eléctrico" loading="lazy" decoding="async" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Color Info Label (hidden on desktop) -->
+            <div class="lg:hidden text-center mb-5 z-20 relative">
+                <span id="customizer-active-name"
+                    class="font-headline-md text-[14px] font-bold text-white tracking-widest uppercase block mb-0.5">GRIS
+                    CROMO</span>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════
+         DESKTOP BACKGROUND (hidden on mobile, handled above)
+         ═══════════════════════════════════════════════ -->
+            <div class="hidden lg:block absolute inset-0 z-0">
+                <img id="custom-bg-desk-0"
+                    class="customizer-bg absolute inset-0 w-full h-full object-cover object-[center_75%] opacity-100 z-10 transition-opacity duration-300 ease-in-out select-none"
+                    src="assets/aspecto1.jpg" alt="Fondo Gris Cromo" loading="lazy" decoding="async" />
+                <img id="custom-bg-desk-1"
+                    class="customizer-bg absolute inset-0 w-full h-full object-cover object-[center_75%] opacity-0 z-10 transition-opacity duration-300 ease-in-out select-none"
+                    src="assets/aspecto2.jpg" alt="Fondo Rosa Neo" loading="lazy" decoding="async" />
+                <img id="custom-bg-desk-2"
+                    class="customizer-bg absolute inset-0 w-full h-full object-cover object-[center_75%] opacity-0 z-10 transition-opacity duration-300 ease-in-out select-none"
+                    src="assets/aspecto3.jpg" alt="Fondo Verde Eléctrico" loading="lazy" decoding="async" />
+            </div>
+
+            <!-- Desktop gradient overlay for text legibility -->
+            <div
+                class="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent pointer-events-none z-10">
+            </div>
+
+            <!-- ═══════════════════════════════════════════════
+         INTERACTION PANEL — color swatches (Mobile: below bike, horizontal circles)
+         ═══════════════════════════════════════════════ -->
+            <div id="customizer-interaction-panel" class="lg:hidden relative z-20">
+                <!-- Minimalist color swatches row -->
+                <div class="flex items-center justify-center gap-5">
+                    <!-- Gris Cromo Swatch -->
+                    <button
+                        class="customizer-swatch-circle active w-12 h-12 rounded-full bg-gradient-to-br from-[#8A8D8F] to-[#1A1A1A] border-2 border-white/10 p-0.5 transition-all duration-300 relative focus:outline-none cursor-pointer"
+                        onclick="selectColor(0)" aria-label="Gris Cromo">
+                    </button>
+
+                    <!-- Rosa Neo Swatch -->
+                    <button
+                        class="customizer-swatch-circle w-12 h-12 rounded-full bg-gradient-to-br from-[#ff007f] to-[#1A1A1A] border-2 border-white/10 p-0.5 transition-all duration-300 relative focus:outline-none cursor-pointer"
+                        onclick="selectColor(1)" aria-label="Rosa Neo">
+                    </button>
+
+                    <!-- Verde Eléctrico Swatch -->
+                    <button
+                        class="customizer-swatch-circle w-12 h-12 rounded-full bg-gradient-to-br from-[#39ff14] to-[#1A1A1A] border-2 border-white/10 p-0.5 transition-all duration-300 relative focus:outline-none cursor-pointer"
+                        onclick="selectColor(2)" aria-label="Verde Eléctrico">
+                    </button>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════
+         DESKTOP LAYOUT (hidden on mobile)
+         ═══════════════════════════════════════════════ -->
+            <div
+                class="hidden lg:grid max-w-[90rem] mx-auto w-full lg:grid-cols-12 gap-8 items-center relative z-10 lg:h-[70vh]">
+
+                <!-- Left Column: Texts & swatches -->
+                <div class="lg:col-span-5 flex flex-col justify-center reveal-on-scroll reveal-left relative z-20">
+                    <h2
+                        class="font-display-lg text-[56px] text-white tracking-normal uppercase font-bold mb-4 leading-none">
+                        ELEGÍ TU AMPHION</h2>
+
+                    <!-- Swatches (Wide premium cards) -->
+                    <div class="flex flex-col gap-4 max-w-lg w-full">
+                        <!-- Color 1 -->
+                        <div class="customizer-swatch active group relative bg-neutral-900/60 border border-secondary shadow-md transition-all duration-300 rounded-2xl p-5 flex items-center justify-between gap-6 cursor-pointer select-none"
+                            onclick="selectColor(0)">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8A8D8F] to-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-headline-md text-[18px] font-bold text-white tracking-wide uppercase">GRIS
+                                        CROMO</span>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-secondary transition-colors text-[22px]">arrow_forward</span>
+                        </div>
+
+                        <!-- Color 2 -->
+                        <div class="customizer-swatch group relative bg-neutral-900/60 border border-white/5 hover:border-secondary/40 transition-all duration-300 rounded-2xl p-5 flex items-center justify-between gap-6 cursor-pointer select-none"
+                            onclick="selectColor(1)">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#ff007f] to-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-headline-md text-[18px] font-bold text-white tracking-wide uppercase">ROSA
+                                        NEO</span>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-white/40 group-hover:text-secondary transition-colors text-[22px]">arrow_forward</span>
+                        </div>
+
+                        <!-- Color 3 -->
+                        <div class="customizer-swatch group relative bg-neutral-900/60 border border-white/5 hover:border-secondary/40 transition-all duration-300 rounded-2xl p-5 flex items-center justify-between gap-6 cursor-pointer select-none"
+                            onclick="selectColor(2)">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#39ff14] to-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-headline-md text-[18px] font-bold text-white tracking-wide uppercase">VERDE
+                                        ELÉCTRICO</span>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-white/40 group-hover:text-secondary transition-colors text-[22px]">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Reserved space to show bike in background -->
+                <div class="lg:col-span-7 relative w-full lg:h-[550px] pointer-events-none select-none"></div>
+
+            </div>
+        </section>
+        <!-- Módulo 6 (Opiniones) -->
+        <section id="reviews"
+            class="relative bg-surface py-16 md:py-24 px-edge-margin overflow-hidden bg-[#1b110e] cv-auto reveal-on-scroll reveal-up">
+            <!-- Title and Subtitle -->
+            <div
+                class="relative z-10 max-w-[90rem] mx-auto w-full flex flex-col justify-center items-center reveal-on-scroll reveal-up text-center mb-8 lg:mb-12">
+                <h2
+                    class="font-display-lg text-[32px] md:text-[56px] text-white tracking-normal uppercase font-bold mb-2">
+                    OPINIONES</h2>
+                <p class="font-body-lg text-[16px] md:text-[18px] text-white/70 max-w-xl mx-auto leading-relaxed">
+                    La voz de quienes ya desafían los límites del trail.
+                </p>
+            </div>
+
+            <!-- Reviews Carousel Container -->
+            <div class="relative z-10 max-w-[90rem] mx-auto w-full px-10 md:px-16 lg:px-0 mt-6">
+                <!-- Flecha Izquierda (Prev) -->
+                <button id="reviews-prev"
+                    class="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-secondary/20 transition-all duration-300 z-20 cursor-pointer lg:hidden"
+                    aria-label="Anterior">
+                    <span class="material-symbols-outlined text-[24px]">chevron_left</span>
+                </button>
+
+                <!-- Carousel Slider Window -->
+                <div id="reviews-carousel-window" class="overflow-hidden lg:overflow-visible relative w-full rounded-2xl">
+                    <div id="reviews-track" class="flex items-stretch transition-transform duration-500 ease-out w-full lg:grid lg:grid-cols-4 lg:gap-6 lg:transform-none lg:transition-none lg:w-auto">
+                        <!-- Review 1 -->
+                        <div class="w-full md:w-1/2 lg:w-auto shrink-0 lg:shrink px-3 lg:px-0 select-none flex">
+                            <div class="w-full relative group overflow-hidden rounded-2xl p-6 lg:p-5 bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] hover:border-secondary/30 transition-all duration-300 flex flex-col justify-between min-h-[320px] lg:min-h-[260px]">
+                                <div>
+                                    <div class="flex items-center gap-1 mb-4 text-[#fe6b00]">
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                    </div>
+                                    <p class="font-body-lg text-[13px] md:text-[14px] text-white/90 leading-relaxed italic mb-6">
+                                        "La Amphion superó todas mis expectativas. La absorción del chasis de carbono en descensos
+                                        técnicos es una locura, se siente increíblemente rígida y veloz."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-3 border-t border-white/10 pt-4 mt-auto">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-[#441700] flex items-center justify-center text-white font-bold text-[13px] uppercase shrink-0">
+                                        MA
+                                    </div>
+                                    <div class="flex flex-col min-w-0">
+                                        <span
+                                            class="font-headline-md text-[13px] md:text-[14px] font-bold text-white tracking-wide truncate">Matías
+                                            Albarracín</span>
+                                        <span class="font-label-mono text-[10px] text-white/50 truncate hidden md:block">Ciclista
+                                            Amateur MTB / Córdoba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="w-full md:w-1/2 lg:w-auto shrink-0 lg:shrink px-3 lg:px-0 select-none flex">
+                            <div class="w-full relative group overflow-hidden rounded-2xl p-6 lg:p-5 bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] hover:border-secondary/30 transition-all duration-300 flex flex-col justify-between min-h-[320px] lg:min-h-[260px]">
+                                <div>
+                                    <div class="flex items-center gap-1 mb-4">
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-white/20">star</span>
+                                    </div>
+                                    <p class="font-body-lg text-[13px] md:text-[14px] text-white/90 leading-relaxed italic mb-6">
+                                        "El cockpit integrado de carbono UD marca una diferencia enorme en el control de la
+                                        dirección. La respuesta al pedalear en curvas cerradas es inmediata."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-3 border-t border-white/10 pt-4 mt-auto">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-[#441700] flex items-center justify-center text-white font-bold text-[13px] uppercase shrink-0">
+                                        SG
+                                    </div>
+                                    <div class="flex flex-col min-w-0">
+                                        <span
+                                            class="font-headline-md text-[13px] md:text-[14px] font-bold text-white tracking-wide truncate">Sofía
+                                            Galliano</span>
+                                        <span class="font-label-mono text-[10px] text-white/50 truncate hidden md:block">Competidora
+                                            XC / Mendoza</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="w-full md:w-1/2 lg:w-auto shrink-0 lg:shrink px-3 lg:px-0 select-none flex">
+                            <div class="w-full relative group overflow-hidden rounded-2xl p-6 lg:p-5 bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] hover:border-secondary/30 transition-all duration-300 flex flex-col justify-between min-h-[320px] lg:min-h-[260px]">
+                                <div>
+                                    <div class="flex items-center gap-1 mb-4">
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-[#fe6b00]">star</span>
+                                        <span class="material-symbols-outlined text-[21px] text-white/20">star</span>
+                                    </div>
+                                    <p class="font-body-lg text-[13px] md:text-[14px] text-white/90 leading-relaxed italic mb-6">
+                                        "Subir pendientes empinadas con la ligereza del chasis y la suavidad del cassette de 12
+                                        velocidades es increíble. El mejor cuadro que he probado."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-3 border-t border-white/10 pt-4 mt-auto">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-[#441700] flex items-center justify-center text-white font-bold text-[13px] uppercase shrink-0">
+                                        ER
+                                    </div>
+                                    <div class="flex flex-col min-w-0">
+                                        <span
+                                            class="font-headline-md text-[13px] md:text-[14px] font-bold text-white tracking-wide truncate">Esteban
+                                            Rossi</span>
+                                        <span class="font-label-mono text-[10px] text-white/50 truncate hidden md:block">Guía de MTB
+                                            / Bariloche</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="w-full md:w-1/2 lg:w-auto shrink-0 lg:shrink px-3 lg:px-0 select-none flex">
+                            <div class="w-full relative group overflow-hidden rounded-2xl p-6 lg:p-5 bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-xl border border-white/10 shadow-[0_12px_32px_rgba(27,17,14,0.3)] hover:border-secondary/30 transition-all duration-300 flex flex-col justify-between min-h-[320px] lg:min-h-[260px]">
+                                <div>
+                                    <div class="flex items-center gap-1 mb-4 text-[#fe6b00]">
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                        <span class="material-symbols-outlined text-[21px]">star</span>
+                                    </div>
+                                    <p class="font-body-lg text-[13px] md:text-[14px] text-white/90 leading-relaxed italic mb-6">
+                                        "Los frenos hidráulicos de disco y la tracción de los neumáticos tubeless me dieron la
+                                        seguridad necesaria para bajar mis tiempos en senderos húmedos."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-3 border-t border-white/10 pt-4 mt-auto">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-[#441700] flex items-center justify-center text-white font-bold text-[13px] uppercase shrink-0">
+                                        LF
+                                    </div>
+                                    <div class="flex flex-col min-w-0">
+                                        <span
+                                            class="font-headline-md text-[13px] md:text-[14px] font-bold text-white tracking-wide truncate">Lucía
+                                            Fernández</span>
+                                        <span class="font-label-mono text-[10px] text-white/50 truncate hidden md:block">Entusiasta
+                                            del Trail / Salta</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flecha Derecha (Siguiente) -->
+                <button id="reviews-next"
+                    class="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-secondary/20 transition-all duration-300 z-20 cursor-pointer lg:hidden"
+                    aria-label="Siguiente">
+                    <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+                </button>
+            </div>
+
+            <!-- Dots Indicator Container -->
+            <div id="reviews-dots" class="flex lg:hidden justify-center gap-1.5 mt-6 relative z-10"></div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="w-full bg-[#160e0c] border-t border-white/5 text-on-surface-variant z-20 relative">
+        <!-- Top Section: Grid -->
+        <div
+            class="max-w-[90rem] mx-auto px-edge-margin py-16 grid grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+            <!-- Col 1: Brand Info (4 cols) -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col gap-6 items-center text-center lg:items-start lg:text-left">
+                <div class="flex items-center gap-3">
+                    <img src="assets/venzologo.png" alt="Venzo Logo" class="h-8 w-auto object-contain opacity-90" />
+                </div>
+                <p class="font-body-lg text-[13px] md:text-[14px] text-white/50 leading-relaxed max-w-sm mx-auto lg:mx-0">
+                    Diseñamos bicicletas de competición de vanguardia. Ingeniería de precisión, cuadros de carbono de
+                    alto módulo y el espíritu del ciclismo extremo en cada detalle.
+                </p>
+                <!-- Social Links -->
+                <div class="flex items-center gap-4 mt-2">
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-secondary/20 hover:border-secondary/40 transition-all duration-300"
+                        aria-label="Instagram">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-secondary/20 hover:border-secondary/40 transition-all duration-300"
+                        aria-label="Facebook">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.39-1 1-1h2V2h-3c-2.9 0-5 1.55-5 4.5V8z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-secondary/20 hover:border-secondary/40 transition-all duration-300"
+                        aria-label="YouTube">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.388.556a3.003 3.003 0 0 0-2.11 2.107C0 8.053 0 12 0 12s0 3.947.502 5.837a3.003 3.003 0 0 0 2.11 2.107C4.5 20.5 12 20.5 12 20.5s7.5 0 9.388-.556a3.003 3.003 0 0 0 2.11-2.107C24 15.947 24 12 24 12s0-3.947-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2: Navigation (2 cols) -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col gap-5 items-center text-center lg:items-start lg:text-left">
+                <span
+                    class="font-headline-md text-[13px] font-bold text-white tracking-widest uppercase">PRODUCTO</span>
+                <ul class="flex flex-col gap-3 items-center lg:items-start">
+                    <li><a href="#enfoque"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Enfoque</a>
+                    </li>
+                    <li><a href="#mastery"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Rendimiento</a>
+                    </li>
+                    <li><a href="#specs-interactive"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Componentes</a>
+                    </li>
+                    <li><a href="#components"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Tecnología</a>
+                    </li>
+                    <li><a href="#customizer"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Aspectos</a>
+                    </li>
+                    <li><a href="#reviews"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Reseñas</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Support (2 cols) -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col gap-5 items-center text-center lg:items-start lg:text-left">
+                <span class="font-headline-md text-[13px] font-bold text-white tracking-widest uppercase">SOPORTE</span>
+                <ul class="flex flex-col gap-3 items-center lg:items-start">
+                    <li><a href="#"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Tiendas
+                            oficiales</a></li>
+                    <li><a href="#"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Garantía
+                            oficial</a></li>
+                    <li><a href="#"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Servicio
+                            técnico</a></li>
+                    <li><a href="#"
+                            class="font-label-mono text-[12px] text-white/60 hover:text-secondary transition-colors duration-300 block">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Newsletter (4 cols) -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col gap-5 items-center text-center lg:items-start lg:text-left">
+                <span
+                    class="font-headline-md text-[13px] font-bold text-white tracking-widest uppercase">SUSCRÍBETE</span>
+                <p class="font-body-lg text-[13px] text-white/50 leading-relaxed max-w-sm mx-auto lg:mx-0">
+                    Recibe información de lanzamientos, tecnologías exclusivas y eventos de MTB.
+                </p>
+                <form class="flex w-full max-w-sm mt-2 relative mx-auto lg:mx-0" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Tu correo electrónico"
+                        class="w-full bg-white/[0.03] border border-white/10 rounded-xl py-3 px-4 text-white text-[13px] placeholder-white/30 focus:outline-none focus:border-secondary transition-colors duration-300 font-body-lg" />
+                    <button type="submit"
+                        class="absolute right-2 top-1.5 bottom-1.5 px-3 rounded-lg bg-secondary text-white hover:bg-secondary-container transition-colors duration-300 flex items-center justify-center cursor-pointer"
+                        aria-label="Suscribir">
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Row: Copyright & Legal Links -->
+        <div class="border-t border-white/5 bg-[#120b09]">
+            <div
+                class="max-w-[90rem] mx-auto px-edge-margin py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <span class="font-label-mono text-[10px] text-white/40 tracking-wider text-center sm:text-left">
+                    © 2026 VENZO VANGUARD INDUSTRIES. TODOS LOS DERECHOS RESERVADOS.
+                </span>
+                <div class="flex items-center gap-6">
+                    <a href="#"
+                        class="font-label-mono text-[10px] text-white/40 hover:text-white transition-colors duration-300 uppercase tracking-widest">Políticas
+                        de Privacidad</a>
+                    <a href="#"
+                        class="font-label-mono text-[10px] text-white/40 hover:text-white transition-colors duration-300 uppercase tracking-widest">Términos
+                        de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Color Customizer function
+        function selectColor(idx) {
+            const mobBgs = [
+                document.getElementById('custom-bg-0'),
+                document.getElementById('custom-bg-1'),
+                document.getElementById('custom-bg-2')
+            ];
+            mobBgs.forEach((bg, i) => {
+                if (bg) {
+                    if (i === idx) {
+                        bg.classList.remove('opacity-0');
+                        bg.classList.add('opacity-100');
+                    } else {
+                        bg.classList.remove('opacity-100');
+                        bg.classList.add('opacity-0');
+                    }
+                }
+            });
+
+            const deskBgs = [
+                document.getElementById('custom-bg-desk-0'),
+                document.getElementById('custom-bg-desk-1'),
+                document.getElementById('custom-bg-desk-2')
+            ];
+            deskBgs.forEach((bg, i) => {
+                if (bg) {
+                    if (i === idx) {
+                        bg.classList.remove('opacity-0');
+                        bg.classList.add('opacity-100');
+                    } else {
+                        bg.classList.remove('opacity-100');
+                        bg.classList.add('opacity-0');
+                    }
+                }
+            });
+
+            const colorNames = ["GRIS CROMO", "ROSA NEO", "VERDE ELÉCTRICO"];
+            const activeName = document.getElementById('customizer-active-name');
+            if (activeName) activeName.textContent = colorNames[idx];
+
+            const mobSwatches = document.querySelectorAll('.customizer-swatch-circle');
+            mobSwatches.forEach((swatch, i) => {
+                if (i === idx) {
+                    swatch.classList.add('active');
+                } else {
+                    swatch.classList.remove('active');
+                }
+            });
+
+            const deskSwatches = document.querySelectorAll('.customizer-swatch');
+            deskSwatches.forEach((swatch, i) => {
+                if (i === idx) {
+                    swatch.classList.add('active');
+                    swatch.classList.remove('border-white/5');
+                    swatch.classList.add('border-secondary', 'shadow-md');
+                    const arrow = swatch.querySelector('.material-symbols-outlined');
+                    if (arrow) {
+                        arrow.classList.remove('text-white/40');
+                        arrow.classList.add('text-secondary');
+                    }
+                } else {
+                    swatch.classList.remove('active');
+                    swatch.classList.remove('border-secondary', 'shadow-md');
+                    swatch.classList.add('border-white/5');
+                    const arrow = swatch.querySelector('.material-symbols-outlined');
+                    if (arrow) {
+                        arrow.classList.remove('text-secondary');
+                        arrow.classList.add('text-white/40');
+                    }
+                }
+            });
+        }
+
+        // Carousel slides and markers activation function
+        function activateSlide(targetItem, idx) {
+            const items = Array.from(document.querySelectorAll('#components .carousel-item'));
+            const markers = document.querySelectorAll('.carousel-dot');
+
+            if (idx === undefined) {
+                idx = items.indexOf(targetItem);
+            }
+
+            items.forEach((item, i) => {
+                if (i === idx) {
+                    item.classList.remove('inactive');
+                    item.classList.add('active');
+                    const overlay = item.querySelector('.carousel-text-box');
+                    if (overlay) overlay.style.opacity = '1';
+                } else {
+                    item.classList.remove('active');
+                    item.classList.add('inactive');
+                    const overlay = item.querySelector('.carousel-text-box');
+                    if (overlay) overlay.style.opacity = '0';
+                }
+            });
+
+            markers.forEach((marker, mIdx) => {
+                if (mIdx === idx) {
+                    marker.classList.remove('bg-white/20');
+                    marker.classList.add('bg-secondary-container');
+                } else {
+                    marker.classList.remove('bg-secondary-container');
+                    marker.classList.add('bg-white/20');
+                }
+
+                if (window.innerWidth >= 1024) {
+                    // Desktop: Keep all dots visible
+                    marker.style.opacity = '1';
+                    if (mIdx === idx) {
+                        marker.classList.add('hotspot-active');
+                    } else {
+                        marker.classList.remove('hotspot-active');
+                    }
+                } else {
+                    // Mobile: Only active dot is visible, no side tooltip active classes
+                    marker.style.opacity = mIdx === idx ? '1' : '0';
+                    marker.classList.remove('hotspot-active');
+                }
+            });
+        }
+
+        function activateSlideByIndex(idx) {
+            const items = document.querySelectorAll('#components .carousel-item');
+            if (items[idx]) {
+                activateSlide(items[idx], idx);
+            }
+        }
+        // ────────────────────────────────────────────────────────────────────
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuCloseBtn = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link, #mobile-menu-reserve');
+
+            const openMobileMenu = () => {
+                mobileMenu.classList.remove('translate-x-full', 'pointer-events-none');
+                mobileMenuBackdrop.classList.remove('opacity-0');
+                mobileMenuBackdrop.classList.add('opacity-100');
+            };
+
+            const closeMobileMenu = () => {
+                mobileMenu.classList.add('translate-x-full', 'pointer-events-none');
+                mobileMenuBackdrop.classList.remove('opacity-100');
+                mobileMenuBackdrop.classList.add('opacity-0');
+            };
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', openMobileMenu);
+            }
+            if (mobileMenuCloseBtn) {
+                mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
+            }
+            if (mobileMenuBackdrop) {
+                mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+            }
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Hotspots Interactive Click Behavior
+            const hotspots = document.querySelectorAll('.hotspot-item');
+            hotspots.forEach(hotspot => {
+                hotspot.style.pointerEvents = 'auto';
+                hotspot.style.cursor = 'pointer';
+                hotspot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isActive = hotspot.classList.contains('hotspot-active');
+
+                    if (isActive) {
+                        hotspot.classList.remove('hotspot-active');
+                    } else {
+                        hotspots.forEach(h => {
+                            if (h !== hotspot) h.classList.remove('hotspot-active');
+                        });
+                        hotspot.classList.add('hotspot-active');
+                    }
+                });
+            });
+
+            // Close any open hotspot tooltip when clicking anywhere outside
+            document.addEventListener('click', () => {
+                hotspots.forEach(h => h.classList.remove('hotspot-active'));
+            });
+            // Swipe / drag support on components carousel
+            const componentsCarousel = document.querySelector('#components .relative.w-full');
+            if (componentsCarousel) {
+                let touchStartX = 0;
+                let mouseStartX = 0;
+                let isDragging = false;
+                const SWIPE_THRESHOLD = 40;
+
+                // Touch events (mobile)
+                componentsCarousel.addEventListener('touchstart', e => {
+                    touchStartX = e.touches[0].clientX;
+                }, { passive: true });
+                componentsCarousel.addEventListener('touchend', e => {
+                    const delta = e.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(delta) > SWIPE_THRESHOLD) {
+                        const direction = delta < 0 ? 1 : -1;
+                        const items = Array.from(document.querySelectorAll('#components .carousel-item'));
+                        const activeItem = document.querySelector('#components .carousel-item.active');
+                        const activeIndex = items.indexOf(activeItem);
+                        if (activeIndex !== -1) {
+                            const targetIndex = (activeIndex + direction + items.length) % items.length;
+                            activateSlide(items[targetIndex], targetIndex);
+                        }
+                    }
+                }, { passive: true });
+
+                // Mouse drag events (desktop)
+                componentsCarousel.addEventListener('mousedown', e => {
+                    if (window.innerWidth >= 1024) return;
+                    mouseStartX = e.clientX;
+                    isDragging = true;
+                });
+                window.addEventListener('mouseup', e => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    const delta = e.clientX - mouseStartX;
+                    if (Math.abs(delta) > SWIPE_THRESHOLD) {
+                        const direction = delta < 0 ? 1 : -1;
+                        const items = Array.from(document.querySelectorAll('#components .carousel-item'));
+                        const activeItem = document.querySelector('#components .carousel-item.active');
+                        const activeIndex = items.indexOf(activeItem);
+                        if (activeIndex !== -1) {
+                            const targetIndex = (activeIndex + direction + items.length) % items.length;
+                            activateSlide(items[targetIndex], targetIndex);
+                        }
+                    }
+                });
+            }
+
+            // Set Hero Video Playback Speed
+            const heroVideo = document.getElementById('hero-video');
+            if (heroVideo) {
+                heroVideo.playbackRate = 0.6;
+            }
+
+            // Sticky Navbar Scroll Effect (throttled with rAF)
+            const navbar = document.getElementById('navbar');
+            const navbarContainer = document.getElementById('navbar-container');
+            let lastScrollState = null;
+
+            const handleScroll = () => {
+                const scrolled = window.scrollY > 20;
+                if (scrolled === lastScrollState) return;
+                lastScrollState = scrolled;
+
+                if (scrolled) {
+                    navbar.classList.remove('bg-transparent', 'border-transparent');
+                    navbar.classList.add('bg-surface/90', 'backdrop-blur-md', 'border-white/5', 'shadow-md');
+                    navbarContainer.classList.remove('py-4', 'md:py-6');
+                    navbarContainer.classList.add('py-2.5', 'md:py-3');
+                } else {
+                    navbar.classList.remove('bg-surface/90', 'backdrop-blur-md', 'border-white/5', 'shadow-md');
+                    navbar.classList.add('bg-transparent', 'border-transparent');
+                    navbarContainer.classList.remove('py-2.5', 'md:py-3');
+                    navbarContainer.classList.add('py-4', 'md:py-6');
+                }
+            };
+
+            let scrollTicking = false;
+            window.addEventListener('scroll', () => {
+                if (!scrollTicking) {
+                    requestAnimationFrame(() => {
+                        handleScroll();
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            }, { passive: true });
+            handleScroll();
+
+            const items = document.querySelectorAll('.carousel-item');
+            items.forEach(item => {
+                if (item.classList.contains('inactive')) {
+                    const overlay = item.querySelector('.carousel-text-box');
+                    if (overlay) overlay.style.opacity = '0';
+                }
+            });
+
+            // Scroll Reveal Observer
+            const observerOptions = {
+                root: null,
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Initialize Lenis Smooth Scroll
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // Connect Lenis to anchor link clicks
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+                            document.getElementById('mobile-menu-close')?.click();
+                        }
+
+                        // Determine offset: center the module for navbar links, otherwise align to top
+                        let offsetValue = 0;
+                        if (this.classList.contains('nav-link') || this.classList.contains('mobile-nav-link')) {
+                            const viewportHeight = window.innerHeight;
+                            const elementHeight = targetElement.offsetHeight;
+                            offsetValue = - (viewportHeight / 2) + (elementHeight / 2);
+                        }
+
+                        lenis.scrollTo(targetElement, {
+                            offset: offsetValue,
+                            duration: 1.4,
+                            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                        });
+                    }
+                });
+            });
+
+            // Navigation Active State Highlight via IntersectionObserver
+            const sections = document.querySelectorAll('main > section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const activeObserverOptions = {
+                root: null,
+                threshold: 0.2, // Adjust threshold to trigger nicely on scroll transitions
+                rootMargin: "-20% 0px -30% 0px"
+            };
+
+            const activeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const activeId = entry.target.getAttribute('id');
+
+                        navLinks.forEach(link => {
+                            const href = link.getAttribute('href');
+                            const line = link.querySelector('span');
+                            if (href === `#${activeId}`) {
+                                link.classList.remove('text-on-surface/80');
+                                link.classList.add('text-secondary');
+                                if (line) {
+                                    line.classList.remove('scale-x-0');
+                                    line.classList.add('scale-x-100');
+                                }
+                            } else {
+                                link.classList.remove('text-secondary');
+                                link.classList.add('text-on-surface/80');
+                                if (line) {
+                                    line.classList.remove('scale-x-100');
+                                    line.classList.add('scale-x-0');
+                                }
+                            }
+                        });
+                    }
+                });
+            }, activeObserverOptions);
+
+            sections.forEach(section => activeObserver.observe(section));
+
+            // Mobile specs interactive carousel
+            let currentSpecsSlideIdx = 0;
+            const specsSlidesCount = 8;
+            const specsTrack = document.getElementById('mobile-specs-track');
+            const specsDots = document.querySelectorAll('#mobile-specs-dots > span');
+
+            const mobileHotspotCoords = [
+                { top: '10%', left: '76%' },    // Cockpit
+                { top: '42%', left: '53%' },   // Cuadro
+                { top: '38%', left: '78%' },   // Suspensión
+                { top: '63%', left: '89%' },   // Frenos
+                { top: '63%', left: '47%' },   // Transmisión
+                { top: '12%', left: '29%' },    // Sillín
+                { top: '59%', left: '4%' },    // Cassette
+                { top: '80%', left: '94%' }    // Ruedas
+            ];
+
+            function updateSpecsSlide(idx) {
+                if (idx < 0) idx = specsSlidesCount - 1;
+                if (idx >= specsSlidesCount) idx = 0;
+                currentSpecsSlideIdx = idx;
+
+                if (specsTrack) {
+                    specsTrack.style.transform = `translateX(-${currentSpecsSlideIdx * 100}%)`;
+                }
+
+                specsDots.forEach((dot, i) => {
+                    if (i === currentSpecsSlideIdx) {
+                        dot.classList.add('bg-secondary', 'w-3');
+                        dot.classList.remove('bg-white/20', 'w-1.5');
+                    } else {
+                        dot.classList.remove('bg-secondary', 'w-3');
+                        dot.classList.add('bg-white/20', 'w-1.5');
+                    }
+                });
+
+                const mobHotspot = document.getElementById('mobile-bike-hotspot');
+                if (mobHotspot) {
+                    const coord = mobileHotspotCoords[currentSpecsSlideIdx];
+                    mobHotspot.style.top = coord.top;
+                    mobHotspot.style.left = coord.left;
+                }
+            }
+
+            updateSpecsSlide(0);
+
+            const specsPrevBtn = document.getElementById('mobile-specs-prev');
+            const specsNextBtn = document.getElementById('mobile-specs-next');
+            if (specsPrevBtn) {
+                specsPrevBtn.addEventListener('click', () => {
+                    updateSpecsSlide(currentSpecsSlideIdx - 1);
+                });
+            }
+            if (specsNextBtn) {
+                specsNextBtn.addEventListener('click', () => {
+                    updateSpecsSlide(currentSpecsSlideIdx + 1);
+                });
+            }
+
+            let specsStartX = 0;
+            const carouselEl = document.getElementById('mobile-specs-carousel');
+            if (carouselEl) {
+                carouselEl.addEventListener('touchstart', (e) => {
+                    specsStartX = e.touches[0].clientX;
+                }, { passive: true });
+
+                carouselEl.addEventListener('touchend', (e) => {
+                    const deltaX = e.changedTouches[0].clientX - specsStartX;
+                    if (deltaX > 50) {
+                        updateSpecsSlide(currentSpecsSlideIdx - 1);
+                    } else if (deltaX < -50) {
+                        updateSpecsSlide(currentSpecsSlideIdx + 1);
+                    }
+                }, { passive: true });
+            }
+
+            // Reviews Carousel Logic
+            const reviewsTrack = document.getElementById('reviews-track');
+            const reviewsPrevBtn = document.getElementById('reviews-prev');
+            const reviewsNextBtn = document.getElementById('reviews-next');
+            const reviewsDotsContainer = document.getElementById('reviews-dots');
+            
+            if (reviewsTrack && reviewsDotsContainer) {
+                const reviewSlides = Array.from(reviewsTrack.children);
+                let currentReviewsSlide = 0;
+
+                function getCardsPerView() {
+                    if (window.innerWidth >= 1024) return 3; // lg
+                    if (window.innerWidth >= 768) return 2;  // md
+                    return 1;                                // mobile
+                }
+
+                function getMaxSlideIndex() {
+                    return Math.max(0, reviewSlides.length - getCardsPerView());
+                }
+
+                function updateReviewsCarousel() {
+                    const maxSlide = getMaxSlideIndex();
+                    if (currentReviewsSlide > maxSlide) currentReviewsSlide = maxSlide;
+                    if (currentReviewsSlide < 0) currentReviewsSlide = 0;
+
+                    const cardWidthPercentage = 100 / getCardsPerView();
+                    const translateAmount = -currentReviewsSlide * cardWidthPercentage;
+                    reviewsTrack.style.transform = `translateX(${translateAmount}%)`;
+
+                    const dots = reviewsDotsContainer.querySelectorAll('span');
+                    dots.forEach((dot, idx) => {
+                        if (idx === currentReviewsSlide) {
+                            dot.classList.remove('bg-white/20', 'w-1.5');
+                            dot.classList.add('bg-secondary', 'w-3');
+                        } else {
+                            dot.classList.remove('bg-secondary', 'w-3');
+                            dot.classList.add('bg-white/20', 'w-1.5');
+                        }
+                    });
+                }
+
+                function buildReviewsDots() {
+                    reviewsDotsContainer.innerHTML = '';
+                    const totalDots = getMaxSlideIndex() + 1;
+                    for (let i = 0; i < totalDots; i++) {
+                        const dot = document.createElement('span');
+                        dot.className = 'w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300 cursor-pointer';
+                        dot.addEventListener('click', () => {
+                            currentReviewsSlide = i;
+                            updateReviewsCarousel();
+                        });
+                        reviewsDotsContainer.appendChild(dot);
+                    }
+                }
+
+                if (reviewsPrevBtn && reviewsNextBtn) {
+                    reviewsPrevBtn.addEventListener('click', () => {
+                        if (currentReviewsSlide > 0) {
+                            currentReviewsSlide--;
+                            updateReviewsCarousel();
+                        }
+                    });
+
+                    reviewsNextBtn.addEventListener('click', () => {
+                        if (currentReviewsSlide < getMaxSlideIndex()) {
+                            currentReviewsSlide++;
+                            updateReviewsCarousel();
+                        }
+                    });
+                }
+
+                let reviewsStartX = 0;
+                reviewsTrack.addEventListener('touchstart', (e) => {
+                    reviewsStartX = e.touches[0].clientX;
+                }, { passive: true });
+
+                reviewsTrack.addEventListener('touchend', (e) => {
+                    const deltaX = e.changedTouches[0].clientX - reviewsStartX;
+                    if (Math.abs(deltaX) > 50) {
+                        if (deltaX < 0 && currentReviewsSlide < getMaxSlideIndex()) {
+                            currentReviewsSlide++;
+                        } else if (deltaX > 0 && currentReviewsSlide > 0) {
+                            currentReviewsSlide--;
+                        }
+                        updateReviewsCarousel();
+                    }
+                }, { passive: true });
+
+                buildReviewsDots();
+                updateReviewsCarousel();
+
+                window.addEventListener('resize', () => {
+                    buildReviewsDots();
+                    updateReviewsCarousel();
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
